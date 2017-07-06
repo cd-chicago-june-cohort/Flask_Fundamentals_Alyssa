@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninjas</title>
+</head>
+<body>
+    {% if ninja_color == None: %}
+        <img src='{{url_for('static', filename='ninjas/tmnt.png')}}'>
+    {% elif ninja_color == 'blue': %}
+        <img src='{{url_for('static', filename='ninjas/leonardo.jpg')}}'>
+    {% elif ninja_color == 'orange': %}
+        <img src='{{url_for('static', filename='ninjas/michelangelo.jpg')}}'>
+    {% elif ninja_color == 'red': %}
+        <img src='{{url_for('static', filename='ninjas/raphael.jpg')}}'>
+    {% elif ninja_color == 'purple': %}
+        <img src='{{url_for('static', filename='ninjas/donatello.jpg')}}'>
+    {% else: %}
+        <img src='{{url_for('static', filename='ninjas/notapril.jpg')}}'>
+    {% endif %}        
+</body>
+</html>

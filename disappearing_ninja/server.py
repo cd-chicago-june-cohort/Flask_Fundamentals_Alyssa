@@ -8,20 +8,11 @@ def index():
 
 @app.route('/ninja')
 def tmnt():
-    return '<img src=' + url_for('static', filename='ninjas/tmnt.png') + '>'
+    return render_template('ninja.html', ninja_color=None)
 
 @app.route('/ninja/<ninja_color>')
 def turtles(ninja_color):
-    if ninja_color == 'blue':
-        return '<img src=' + url_for('static', filename='ninjas/leonardo.jpg') + '>'
-    elif ninja_color == 'orange':    
-        return '<img src=' + url_for('static', filename='ninjas/michelangelo.jpg') + '>'
-    elif ninja_color == 'red':
-        return '<img src=' + url_for('static', filename='ninjas/raphael.jpg') + '>'
-    elif ninja_color == 'purple':
-        return '<img src=' + url_for('static', filename='ninjas/donatello.jpg') + '>'
-    else:
-        return '<img src=' + url_for('static', filename='ninjas/notapril.jpg') + '>'
+    return render_template('ninja.html', ninja_color=ninja_color)
             
 
 app.run(debug=True)
