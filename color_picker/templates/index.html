@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <style>{{ color }}</style>
+    <title>Color Picker</title>
+</head>
+<body>
+    <h1>Enter your color values below</h1>
+    <form action="/" method='post'>
+        Red: <input type="text" name="red"><br>
+        Green: <input type="text" name="green"><br>
+        Blue: <input type="text" name="blue"><br>
+        <p>* All values must be between 1 and 255</p>
+        <input type="submit" value="Show my color!">
+    </form>
+</body>
+</html>
