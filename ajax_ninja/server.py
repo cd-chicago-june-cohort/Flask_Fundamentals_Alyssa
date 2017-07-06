@@ -1,15 +1,15 @@
-from flask import Flask, render_template, redirect, request, jsonify
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', ninja_color=None)
 
-@app.route('/ninja_color', methods=['POST'])
-def ninja_color():
-    color = request.form['color']
-    print color
-    return redirect('/')
+
+@app.route('/process/<color>')
+def ninjas(color):
+    return jsonify(color=color)
+
 
 app.run(debug=True)

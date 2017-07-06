@@ -4,12 +4,28 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 #buttons{
     width: 350px;
     margin: 30px auto;
+    text-align: center;
 }
 
 button{
     margin: 0 20px;
     padding: 5px;
+}
+
+p{
+    margin-top: 20px;
+}
+
+img{
+    width: 200px;
+}
+
+#ninja_pics{
+    width: 900px;
+    margin: auto;
+    text-align: center;
 }
