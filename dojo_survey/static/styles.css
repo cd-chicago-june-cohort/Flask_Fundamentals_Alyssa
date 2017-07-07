@@ -5,6 +5,12 @@
 }
 
 #wrapper{
-    width: 500px;
-    border: 1px solid black
+    width: 250px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.error{
+    color: red;
+    margin-bottom: 5px;
 }

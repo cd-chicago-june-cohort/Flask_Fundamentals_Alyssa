@@ -9,8 +9,15 @@
 </head>
 <body>
     <div id="wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class='error'>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <form action="/results" method="post">
-            Your Name: <input type="text" name='name'>
+            Your Name: <input type="text" name='name'><br/>
             Dojo Location: <select name='location'>
                 <option value = "Chicago">Chicago</option>
                 <option value = "Dallas">Dallas</option>
@@ -18,15 +25,15 @@
                 <option value="Silicon Valley">Silicon Valley</option>
                 <option value="Seattle">Seattle</option>
                 <option value="Washington DC">Washington DC</option>
-            </select>
+            </select><br/>
             Favorite Language: <select name='language'>
                 <option value = "Python">Python</option>
                 <option value = "Ruby">Ruby</option>
                 <option value="C#">C#</option>
-            </select>
+            </select><br/>
             Comment(optional): <br>
-            <input type="textarea" name="comment">
-            <input type="submit" value="results">
+            <textarea name="comment"></textarea><br/>
+            <input type="submit" value="Results">
         </form>
     </div>
 </body>
